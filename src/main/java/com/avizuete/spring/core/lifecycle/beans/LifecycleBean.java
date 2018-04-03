@@ -10,21 +10,26 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LifecycleBean implements InitializingBean, DisposableBean, BeanFactoryAware, BeanNameAware, BeanClassLoaderAware {
 	
-	private String name;
+	
+	private String origen;
 	
 	public LifecycleBean() {
 		System.out.println("1. LifecycleBean Constructor");
 	}
 	
-	public String getName() {
-		return name;
+	public String getOrigen() {
+		return origen;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	@Value("${com.avizuete.lifecycle.bean.origen}")
+	public void setOrigen(String origen) {
+		this.origen = origen;
 		System.out.println("2. LifecycleBean Setters");		
 	}
 		

@@ -11,7 +11,7 @@ public class SpringLifecycleApplicationJavaConfig {
 		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		
 		LifecycleBean book = (LifecycleBean) context.getBean("myBean");
-		System.out.println("11. Tiempo de ejecución del Bean, la propiedad Name es " + book.getName());
+		System.out.println("11. Tiempo de ejecución del Bean, la propiedad Origen es " + book.getOrigen());
 		
 		context.close();
 	}

@@ -2,11 +2,11 @@ package com.avizuete.spring.core.lifecycle.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.avizuete.spring.core.lifecycle.beans.LifecycleBean;
 
-@Component
+@Service
 public class MyBeanPostProcessor implements BeanPostProcessor {
 
 	@Override

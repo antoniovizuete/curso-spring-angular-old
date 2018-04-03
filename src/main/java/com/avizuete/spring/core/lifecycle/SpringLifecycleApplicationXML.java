@@ -10,8 +10,8 @@ public class SpringLifecycleApplicationXML {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
 
-		LifecycleBean book = (LifecycleBean) context.getBean("myBean");
-		System.out.println("11. Tiempo de ejecución del Bean, la propiedad Name es " + book.getName());
+		LifecycleBean book = context.getBean(LifecycleBean.class);
+		System.out.println("11. Tiempo de ejecución del Bean, la propiedad Origen es " + book.getOrigen());
 		
 		context.close();
 	}
